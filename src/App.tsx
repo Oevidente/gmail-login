@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 function App() {
   const [isLogin, setIsLogin] = useState(true);
@@ -6,23 +6,7 @@ function App() {
   const handleButtonClick = () => {
     setIsLogin(!isLogin);
   };
-  useEffect(() => {
-    const checkbox = document.querySelector(
-      '.mostraSenha input[type="checkbox"]',
-    );
 
-    if (checkbox) {
-      checkbox.addEventListener('click', function () {
-        if (this.classList.contains('unchecked')) {
-          this.classList.remove('unchecked');
-          this.classList.add('checked');
-        } else if (this.classList.contains('checked')) {
-          this.classList.remove('checked');
-          this.classList.add('unchecked');
-        }
-      });
-    }
-  }, []);
   return (
     <div className="App">
       <div className="cabecalho">
