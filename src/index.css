@@ -1,0 +1,229 @@
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./GoogleSans-Regular.ttf');
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+  width: 100vw;
+  font-family: 'Google Sans', 'Noto Sans Myanmar UI', arial, sans-serif;
+}
+.App {
+  /* margin: auto; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 40px;
+  background-color: white;
+
+  height: 416px;
+  width: 367.778px;
+
+  border: 1px solid #dadce0;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  margin: 0 auto;
+  min-height: 0;
+}
+.cabecalho {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-self: flex-start !important;
+  justify-self: flex-start !important;
+  width: 100%;
+  margin: 40px 0;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.3333;
+}
+.link {
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: translateX(-24px) !important;
+  font-family: 'Google Sans', 'Noto Sans Myanmar UI', arial, sans-serif;
+  font-weight: bolder;
+  align-self: center !important;
+}
+.link,
+a {
+  font-family: roboto, 'Noto Sans Myanmar UI', arial, sans-serif;
+  color: rgb(26, 115, 232);
+  text-decoration: none;
+  font-weight: 500 !important;
+  letter-spacing: 0.25px;
+  outline: 0;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: left;
+  background: transparent;
+  border: 0 solid transparent;
+  border-width: 0 24px;
+  box-sizing: border-box;
+  vertical-align: top;
+  margin: 0 -3px;
+  padding: 0 3px;
+  align-self: flex-start;
+}
+a {
+  border: none;
+}
+.lang {
+  padding-left: 16px;
+  width: 184px;
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 12px !important;
+  font-family: roboto, 'Noto Sans Myanmar UI', arial, sans-serif;
+}
+.lang {
+  cursor: pointer;
+}
+.lang svg {
+  height: 5px;
+  width: 10px;
+}
+.lang .svg {
+  height: 24px;
+  width: 24px;
+}
+.lang span {
+  font-size: 12px;
+}
+#email-or-phone,
+#password {
+  height: 28px;
+  width: 336px;
+  padding: 13px 15px;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  box-sizing: inherit;
+}
+input {
+  font-size: 16px;
+}
+input:focus {
+  outline: none;
+  border: none;
+  box-shadow: 0 0 0 2px #1a73e8 !important;
+  border-radius: 4px !important;
+}
+label {
+  transform: translateY(-36px);
+  align-self: flex-start;
+  margin-left: 15px;
+  color: rgb(95, 99, 104);
+
+  pointer-events: none;
+  transition: 0.1s ease all;
+}
+#email-or-phone:focus ~ label,
+#email-or-phone:valid ~ label,
+#password:focus ~ label,
+#password:valid ~ label {
+  margin-left: 10px;
+  transform: translateY(-64px);
+  font-size: 12px;
+  color: #1a73e8;
+  background-color: white;
+  padding: 0 5px;
+  text-align: center;
+}
+p,
+span {
+  color: rgb(95, 99, 104);
+  letter-spacing: 0.25px;
+}
+p,
+a,
+span {
+  font-size: 14px;
+  text-align: left;
+}
+
+.saiba {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.mostraSenha {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  height: 48px !important;
+  width: 100% !important;
+}
+.mostraSenha label,
+.mostraSenha input {
+  padding: 0 !important;
+  height: 46px;
+}
+.mostraSenha input[type='checkbox'] {
+  height: 18px;
+  width: 18px;
+}
+.unchecked {
+  -webkit-appearance: none;
+  border: 2px solid rgb(32, 33, 36) !important;
+  border-width: 0 24px;
+  color: rgb(32, 33, 36);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.checked {
+  background: #1a73e8;
+  border-color: #1a73e8;
+}
+.mostraSenha label {
+  transform: translateY(14px);
+  font-size: 14px;
+  color: black;
+}
+.avancar {
+  height: 36px;
+  width: 102px;
+  background-color: #1a73e8;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  font-family: 'Google Sans', 'Noto Sans Myanmar UI', arial, sans-serif !important;
+  cursor: pointer;
+}
+
+.avancar:hover {
+  background-color: #0756be;
+}
+
+.foot {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+form > .link:first-of-type {
+  transform: translateX(-114px) translateY(-14px) !important;
+}
