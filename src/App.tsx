@@ -1,10 +1,22 @@
 import React, { useState } from 'react';
-
+// asdas
 function App() {
   const [isLogin, setIsLogin] = useState(true);
+  const [inputValue, setInputValue] = useState('');
+  const [showPassword, setShowPassword] = useState(false); // novo estado
 
-  const handleButtonClick = () => {
+  const handleButtonClick = (event) => {
+    event.preventDefault();
     setIsLogin(!isLogin);
+    setInputValue(''); // limpa o input
+  };
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value); // atualiza o valor do input
+  };
+
+  const handleCheckboxChange = (event) => {
+    setShowPassword(event.target.checked); // atualiza o estado quando o checkbox muda
   };
 
   return (
@@ -62,9 +74,11 @@ function App() {
       </div>
       <form>
         <input
-          type={isLogin ? 'email' : 'password'}
+          type={isLogin ? 'email' : showPassword ? 'text' : 'password'} // usa o estado para determinar o tipo
           id={isLogin ? 'email-or-phone' : 'password'}
           name={isLogin ? 'email-or-phone' : 'password'}
+          value={inputValue} // controla o valor do input
+          onChange={handleInputChange} // atualiza o valor do input quando ele muda
           required
         />
         <label
@@ -80,7 +94,12 @@ function App() {
         )}
         {!isLogin && (
           <div className="mostraSenha">
-            <input type="checkbox" id="mostrar-senha" className="uncheked" />
+            <input
+              type="checkbox"
+              id="mostrar-senha"
+              className="uncheked"
+              onChange={handleCheckboxChange}
+            />
             <label htmlFor="mostrar-senha">Mostrar senha</label>
           </div>
         )}
